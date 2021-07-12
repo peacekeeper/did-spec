@@ -3138,8 +3138,61 @@ conformant representations; conversion is possible using production and
 consumption rules.">
         <figcaption>
 Functions resolve() and resolveRepresentation().
+See also: <a class="longdesc-link"
+href="#resolve-resolverepresentation-longdesc">narrative description</a>.
         </figcaption>
       </figure>
+
+        <div class="longdesc" id="resolve-resolverepresentation-longdesc">
+            <p>
+                The upper middle part of the diagram contains a rectangle with dashed grey outline,containing two blue-outlined rectangles, one above the other, as follows.
+                The upper, larger rectangle is labeled, in blue, "Core Properties", and contains the following [INFRA] notation:
+            </p>
+            <pre>
+«[
+  "id" → "example:123",
+  "verificationMethod" → « «[
+    "id": "did:example:123#keys-1",
+    "controller": "did:example:123",
+    "type": "Ed25519VerificationKey2018",
+    "publicKeyBase58": "H3C2AVvLMv6gmMNam3uVA"
+  ]» »,
+  "authentication" → «
+    "did:example:123#keys-1"
+  »
+]»
+            </pre>
+            <p>
+            The lower, smaller rectangle is labeled, in blue, "Core Representation-specific Entries (JSON-LD)", and contains the following monospaced [INFRA] notation:
+            </p>
+            <pre>
+«[ "@context" → "https://www.w3.org/ns/did/v1" ]»
+        </pre>
+            <p>
+                The bottom half of the diagram contains three black-outlines rectangles. The first rectangle in the bottom half is labeled "application/did+ld+json" and contains the following
+                [INFRA] notation:
+            </p>
+            <pre>
+                «[
+                ]»
+            </pre>
+            <p>
+                The second rectangle in the bottom half is labeled "application/did+json" and contains the following
+                [INFRA] notation:
+            </p>
+            <pre>
+                «[
+                ]»
+            </pre>
+            <p>
+                The thid rectangle in the bottom half is labeled "application/did+cbor" and contains the following
+                [INFRA] notation:
+            </p>
+            <pre>
+                «[
+                ]»
+            </pre>
+        </div>
 
       <p>
 The input variables
